@@ -1,8 +1,13 @@
 //Check if a given string is palindrome
 
 function checkPalindrone(str){
+    //create a variable to store the lenght of the array
     let len = str.length;
+    //divide the variable used to store the length of the array by 2
     for (let i=0; i<len/2; i++){
+        //check if the right hand side is equal to the left hand side. 
+        //len-1-i is used to check the index of the last item,because
+        //to check the last index in an array you check the length den minus 1
         if(str[i] !== str[len-1-i]){
             console.log("it is not a palindrone")
             return
@@ -106,14 +111,18 @@ console.log(sum)
 
 
 
-//find index of a number at any given array
+//find index of any number in the array
 let arrNum=[3,2,5,20,12,80]
 
 function findIndex(n){
-    for(let i=0; i<arrNum.length; i++)
-        return arrNum[3]
+    for(let i=0; i<arrNum.length; i++){
+        if(arrNum[i] === n){
+            return i
+        }
+    }
+    return -1
 }
-console.log(findIndex(3))
+console.log(findIndex(2))
 
 //Merge 2 Arrays
 
@@ -174,9 +183,9 @@ console.log(members)
 
 //Get member by name
 
-function getMembersByName(){
+function getMembersByName(member){
     for(member of members){
-        if(member.name1 == "Joy"){
+        if(member.name1 == "name1"){
             return member
         }
 
